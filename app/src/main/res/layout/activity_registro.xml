@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verde"
+    tools:context=".RegistroActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Header con logo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="32dp">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/logito"
+                    android:layout_marginBottom="6dp"
+                    android:contentDescription="Logo de la aplicación" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transporteya"
+                    android:textSize="28sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registro_de_usuario"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <!-- Nombre completo -->
+                    <EditText
+                        android:id="@+id/etNombreCompleto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nombre_completo"
+                        android:drawableStart="@drawable/usuario"
+                        android:drawablePadding="10dp"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/verdecito"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Correo electrónico -->
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/correo_electr_nico"
+                        android:drawableStart="@drawable/gmail"
+                        android:drawablePadding="10dp"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/verdecito"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Teléfono -->
+                    <EditText
+                        android:id="@+id/etTelefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/tel_fono"
+                        android:drawableStart="@drawable/telefono"
+                        android:drawablePadding="10dp"
+                        android:inputType="phone"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/verdecito"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Contraseña -->
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/contrase_a"
+                        android:inputType="textPassword"
+                        android:drawableStart="@drawable/contra"
+                        android:drawablePadding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/verdecito"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Confirmar contraseña -->
+                    <EditText
+                        android:id="@+id/etConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/confirmar_contrase_a"
+                        android:drawableStart="@drawable/contra"
+                        android:drawablePadding="10dp"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/verdecito"
+                        android:layout_marginBottom="24dp" />
+
+                    <!-- Checkbox -->
+                    <CheckBox
+                        android:id="@+id/cbTerminos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/acepto_los_t_rminos_y_condiciones"
+                        android:textColor="@color/verdecito"
+                        android:buttonTint="@color/verdecito"
+                        android:layout_marginBottom="24dp" />
+
+                    <!-- Botón registrarse -->
+                    <Button
+                        android:id="@+id/btnRegistrarse"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="@string/registrarse"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+
+                        android:backgroundTint="#28880A"
+                        android:textColor="@color/white"
+                        android:elevation="4dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Link para login -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ya_tienes_cuenta"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/iniciar_sesi_n"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
